@@ -1,0 +1,7 @@
+<form [formGroup]="addTaskForm">
+
+  
+  <input type="text"  formControlName="todo">
+  <button (click)="addTask(addTaskForm.value)">Add</button>
+</form>
+{{addTaskForm.value|json}}

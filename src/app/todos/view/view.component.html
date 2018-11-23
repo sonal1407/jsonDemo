@@ -1,0 +1,12 @@
+<table>
+  <tr>
+    <th>Id</th>
+    <th>todos</th>
+  </tr>
+  <tr *ngFor="let todo of getTasks">
+<td>{{todo.id}}</td>
+<td>{{todo.todo}}</td>
+<td><button routerLink = "/todos/edit/{{todo.id}}">Edit</button></td>
+<td><button (click)="delete(todo.id)">delete</button></td>
+  </tr>
+</table>
